@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>고차함수</h2>
+    <script>
+        const filter_result = [1,2,3,4].filter((value,index,array)=>{
+            console.log(value);
+            return value%2 ==0;
+        })
+        console.log(filter_result);
+    </script>
+    <script>
+        const map_result = [1,2,3,4].map((value, index,array)=>{
+            console.log(value);
+            return value*10;
+        })
+        console.log(map_result);
+        
+    </script>
+
+    <script>
+        const reduce_result = [1,2,3,4].reduce((pv,cv,idx,arr)=>{
+            return pv +cv;
+        }, 100);
+        console.log(reduce_result);
+        
+    </script>
+
+    <script>
+        const users = [
+  { name: "Alice", age: 25, active: true },
+  { name: "Bob", age: 17, active: false },
+  { name: "Charlie", age: 30, active: true },
+  { name: "David", age: 22, active: false }
+    ];
+    
+    const names = users.map(user => user.name);
+    console.log(names);
+
+    const adults = users.filter(user => user.age >= 20);
+    console.log(adults);
+    
+    const totalAge = users.reduce((sum, user)=> sum + user.age, 0);
+    console.log(totalAge);
+    
+    const activeUserNames = users
+     .filter(user => user.active)
+     .map(user => user.name);
+
+    console.log(activeUserNames);
+
+    
+    </script>
+</body>
+</html>
