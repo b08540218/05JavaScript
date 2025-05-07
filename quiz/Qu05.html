@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요일 입력 프로그램</title>
+    <script>
+        function checkDay() {
+            let day = prompt("요일을 입력하세요 (월, 화, 수, 목, 금, 토, 일):");
+
+            switch (day) {
+                case "월":
+                case "화":
+                case "수":
+                case "목":
+                    alert("출근");
+                    break;
+                case "금":
+                case "토":
+                case "일":
+                    alert("휴일");
+                    break;
+                default:
+                    alert("잘못된 입력입니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>요일 입력 프로그램</h1>
+    <button onclick="checkDay()">요일 입력</button>
+</body>
+</html>

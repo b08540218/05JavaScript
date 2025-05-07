@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>document.write()로 표 만들기</h2>
+    
+    <script>
+        document.write("<table>");
+
+        document.write("<td><b>n</b></td>");
+        for (let i = 0; i <= 9; i++) {
+            document.write("<td>" + i + "</td>");
+            
+        }
+        document.write("</tr>");
+
+        document.write("<tr>");
+        document.write("<td><b>n²</b></td>");
+        for (let i = 0; i <= 9; i++) {
+            document.write("<td>" + (i * i) + "</td>");
+        }
+         document.write("</tr>");
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

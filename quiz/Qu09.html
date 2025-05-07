@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>난수 최대값 찾기</title>
+  <script>
+    function generateAndFindMax() {
+      let plots = [];
+
+      // 1~100 사이의 난수 10개 생성하여 배열에 저장
+      for (let i = 0; i < 10; i++) {
+        let rand = Math.floor(Math.random() * 100) + 1; // 1 ~ 100
+        plots.push(rand);
+      }
+
+      // 가장 큰 수 찾기
+      let max = Math.max(...plots);
+
+      // 결과 출력
+      document.write("생성된 난수: " + plots.join(", ") + "<br>");
+      document.write("가장 큰 수?: " + max);
+    }
+  </script>
+</head>
+<body>
+  <h1>난수 최대값 찾기</h1>
+  <button onclick="generateAndFindMax()">실행</button>
+</body>
+</html>

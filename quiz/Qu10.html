@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>정수 5개 입력받아 역순으로 출력</title>
+  <script>
+    function inputAndReverse() {
+      let numbers = [];
+
+      // 정수 5개 입력받기
+      for (let i = 0; i < 5; i++) {
+        let input = prompt((i + 1) + "번째 정수를 입력하세요:");
+        numbers.push(parseInt(input));
+      }
+
+      document.getElementById("original").textContent = "입력된 수 배열: " + numbers.join(", ");
+
+      let reversed = [...numbers].reverse(); 
+      document.getElementById("reversed").textContent = "역순으로 재졍렬된 배열: " + reversed.join(", ");
+    }
+  </script>
+</head>
+<body>
+  <h1>정수 입력 및 반대순 출력</h1>
+  <button onclick="inputAndReverse()">입력 시작</button>
+<hr>
+  <p id="original"></p>
+  <hr>
+  <p id="reversed"></p>
+
+</body>
+</html>
