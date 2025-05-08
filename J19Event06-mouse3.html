@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var imgElement;
+        var Width = 225;
+        var Height = 313;
+
+        function mouseoverFunc(img){
+            img.src="./images/2.jpg";
+        }
+        function mouseoutFunc(){
+            imgElement.src="./images/1.jpg";
+        }
+        function mousedownFunc(){
+            imgElement.style.width = (Width * 2) + "px";
+            imgElement.style.height = (Height * 2) + "px";
+        }
+        function mouseupFunc(){
+            imgElement.style.width = Width + "px";
+            imgElement.style.height = Height + "px";
+        }
+        
+        window.onload=function(){
+            imgElement = document.getElementById("img");
+            imgElement.addEventListener("mousedown", mousedownFunc);
+            imgElement.addEventListener("mouseup", mouseupFunc);
+        }
+        
+    </script>
+</head>
+<body>
+    <h3>이미지에 마우스 이벤트 적용하기</h3>
+    <img id="img" src="./images/1.jpg" alt="하트" style="width: 225px;height: 313px;"
+        onmouseover="mouseoverFunc(this);" onmouseout="mouseoutFunc();"/>
+</body>
+</html>
